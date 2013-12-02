@@ -48,7 +48,8 @@ def register_module():
         ('/student/editstudent', utils.StudentEditStudentHandler),
         ('/student/home', utils.StudentProfileHandler),
         ('/student/unenroll', utils.StudentUnenrollHandler),
-        ('/unit', lessons.UnitHandler)]
+        ('/unit', lessons.UnitHandler),
+        ('/faq', utils.FaqHandler)]
 
     global custom_module
     custom_module = custom_modules.Module(

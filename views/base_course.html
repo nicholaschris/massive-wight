@@ -45,6 +45,13 @@
           </li>
         {% endif %}
 
+        <!-- custom code: FAQ -->    
+          <li {% if navbar.faq %}class='active'{% endif %}>
+            {# I18N: Navbar tab. #}
+            <a href="faq">{{ gettext('FAQ') }}</a>
+          </li>
+        <!-- end custom code -->
+        
         <!-- right-aligned links are in order -->
         {% if is_super_admin %}
           <li class="gcb-pull-right">
