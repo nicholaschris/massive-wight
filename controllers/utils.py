@@ -517,7 +517,9 @@ class FaqHandler(BaseHandler):
     """Handler for FAQ page."""
     def get(self):
         """Handles GET requests."""
-        if not self.personalize_page_and_get_enrolled():
+        student = elf.personalize_page_and_get_enrolled(
+            supports_transient_student=True)
+        if not student:
             return
 
         self.template_value['navbar'] = {'faq': True }
